@@ -1,0 +1,5 @@
+![Screenshot 2024-05-12 220458](https://github.com/Yashl-Ammar/MLOPsAssignment2/assets/78467616/3e939a44-aee5-4e42-911f-173ffeede895)
+![Screenshot 2024-05-12 215856](https://github.com/Yashl-Ammar/MLOPsAssignment2/assets/78467616/9be7d9cb-0ec8-4f6c-a3bd-c3e90f8f9d82)
+![Screenshot 2024-05-12 215903](https://github.com/Yashl-Ammar/MLOPsAssignment2/assets/78467616/7025f633-0eaa-4d18-a26f-8f6075d05ec5)
+![Screenshot 2024-05-12 220234](https://github.com/Yashl-Ammar/MLOPsAssignment2/assets/78467616/4f74d170-1c29-4467-bf25-fc3615f9b9f3)
+![Screenshot 2024-05-12 220351](https://github.com/Yashl-Ammar/MLOPsAssignment2/assets/78467616/175f3729-d901-415d-9caf-6c8796c23244)
