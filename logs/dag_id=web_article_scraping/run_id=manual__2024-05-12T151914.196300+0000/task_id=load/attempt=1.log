@@ -1,0 +1,34 @@
+[2024-05-12T15:19:24.840+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-12T15:19:24.858+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: web_article_scraping.load manual__2024-05-12T15:19:14.196300+00:00 [queued]>
+[2024-05-12T15:19:24.865+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: web_article_scraping.load manual__2024-05-12T15:19:14.196300+00:00 [queued]>
+[2024-05-12T15:19:24.866+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-05-12T15:19:24.878+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): load> on 2024-05-12 15:19:14.196300+00:00
+[2024-05-12T15:19:24.882+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=4079) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-05-12T15:19:24.884+0000] {standard_task_runner.py:63} INFO - Started process 4081 to run task
+[2024-05-12T15:19:24.884+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'web_article_scraping', 'load', 'manual__2024-05-12T15:19:14.196300+00:00', '--job-id', '63', '--raw', '--subdir', 'DAGS_FOLDER/mlops_dag.py', '--cfg-path', '/tmp/tmpp8e5_ist']
+[2024-05-12T15:19:24.885+0000] {standard_task_runner.py:91} INFO - Job 63: Subtask load
+[2024-05-12T15:19:24.925+0000] {task_command.py:426} INFO - Running <TaskInstance: web_article_scraping.load manual__2024-05-12T15:19:14.196300+00:00 [running]> on host 8b349270b58a
+[2024-05-12T15:19:24.987+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='web_article_scraping' AIRFLOW_CTX_TASK_ID='load' AIRFLOW_CTX_EXECUTION_DATE='2024-05-12T15:19:14.196300+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-12T15:19:14.196300+00:00'
+[2024-05-12T15:19:24.989+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-12T15:19:26.542+0000] {mlops_dag.py:34} WARNING - No valid title or description for URL: https://www.bbc.com/news/world-europe-68998913
+[2024-05-12T15:19:26.544+0000] {mlops_dag.py:78} INFO - No data extracted for https://www.bbc.com/news/world-europe-68998913
+[2024-05-12T15:19:26.724+0000] {mlops_dag.py:34} WARNING - No valid title or description for URL: https://www.bbc.com/news/uk-politics-68999212
+[2024-05-12T15:19:26.725+0000] {mlops_dag.py:78} INFO - No data extracted for https://www.bbc.com/news/uk-politics-68999212
+[2024-05-12T15:19:26.919+0000] {mlops_dag.py:34} WARNING - No valid title or description for URL: https://www.bbc.com/news/world-europe-68998913
+[2024-05-12T15:19:26.920+0000] {mlops_dag.py:78} INFO - No data extracted for https://www.bbc.com/news/world-europe-68998913
+[2024-05-12T15:19:27.098+0000] {mlops_dag.py:34} WARNING - No valid title or description for URL: https://www.bbc.com/news/uk-politics-68999212
+[2024-05-12T15:19:27.099+0000] {mlops_dag.py:78} INFO - No data extracted for https://www.bbc.com/news/uk-politics-68999212
+[2024-05-12T15:19:27.271+0000] {mlops_dag.py:34} WARNING - No valid title or description for URL: https://www.bbc.com/news/articles/c72p0xx410xo
+[2024-05-12T15:19:27.272+0000] {mlops_dag.py:78} INFO - No data extracted for https://www.bbc.com/news/articles/c72p0xx410xo
+[2024-05-12T15:19:27.443+0000] {mlops_dag.py:34} WARNING - No valid title or description for URL: https://www.bbc.com/news/world-us-canada-68996066
+[2024-05-12T15:19:27.445+0000] {mlops_dag.py:78} INFO - No data extracted for https://www.bbc.com/news/world-us-canada-68996066
+[2024-05-12T15:19:27.608+0000] {mlops_dag.py:34} WARNING - No valid title or description for URL: https://www.bbc.com/news/world-us-canada-68991796
+[2024-05-12T15:19:27.610+0000] {mlops_dag.py:78} INFO - No data extracted for https://www.bbc.com/news/world-us-canada-68991796
+[2024-05-12T15:19:27.975+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-05-12T15:19:27.975+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-12T15:19:27.982+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=web_article_scraping, task_id=load, run_id=manual__2024-05-12T15:19:14.196300+00:00, execution_date=20240512T151914, start_date=20240512T151924, end_date=20240512T151927
+[2024-05-12T15:19:28.028+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-05-12T15:19:28.043+0000] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-05-12T15:19:28.045+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

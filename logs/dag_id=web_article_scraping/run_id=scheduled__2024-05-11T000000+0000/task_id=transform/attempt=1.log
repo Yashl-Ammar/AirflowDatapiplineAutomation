@@ -1,0 +1,191 @@
+[2024-05-12T13:30:44.457+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-12T13:30:44.475+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: web_article_scraping.transform scheduled__2024-05-11T00:00:00+00:00 [queued]>
+[2024-05-12T13:30:44.482+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: web_article_scraping.transform scheduled__2024-05-11T00:00:00+00:00 [queued]>
+[2024-05-12T13:30:44.483+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-05-12T13:30:44.494+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): transform> on 2024-05-11 00:00:00+00:00
+[2024-05-12T13:30:44.500+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=2559) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-05-12T13:30:44.501+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'web_article_scraping', 'transform', 'scheduled__2024-05-11T00:00:00+00:00', '--job-id', '34', '--raw', '--subdir', 'DAGS_FOLDER/mlops_dag.py', '--cfg-path', '/tmp/tmpqjoppzjj']
+[2024-05-12T13:30:44.502+0000] {standard_task_runner.py:63} INFO - Started process 2561 to run task
+[2024-05-12T13:30:44.502+0000] {standard_task_runner.py:91} INFO - Job 34: Subtask transform
+[2024-05-12T13:30:44.542+0000] {task_command.py:426} INFO - Running <TaskInstance: web_article_scraping.transform scheduled__2024-05-11T00:00:00+00:00 [running]> on host 8b349270b58a
+[2024-05-12T13:30:44.607+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='web_article_scraping' AIRFLOW_CTX_TASK_ID='transform' AIRFLOW_CTX_EXECUTION_DATE='2024-05-11T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-05-11T00:00:00+00:00'
+[2024-05-12T13:30:44.609+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-12T13:30:46.097+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/articles/c4n14merj97o
+[2024-05-12T13:30:46.098+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/articles/c4n14merj97o
+[2024-05-12T13:30:46.272+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/world-europe-68998913
+[2024-05-12T13:30:46.274+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/world-europe-68998913
+[2024-05-12T13:30:46.443+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/articles/c4n14merj97o
+[2024-05-12T13:30:46.445+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/articles/c4n14merj97o
+[2024-05-12T13:30:46.617+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/world-europe-68998913
+[2024-05-12T13:30:46.618+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/world-europe-68998913
+[2024-05-12T13:30:46.792+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/uk-politics-68999212
+[2024-05-12T13:30:46.794+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/uk-politics-68999212
+[2024-05-12T13:30:46.962+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/world-us-canada-68996066
+[2024-05-12T13:30:46.964+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/world-us-canada-68996066
+[2024-05-12T13:30:47.151+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/world-us-canada-68991796
+[2024-05-12T13:30:47.152+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/world-us-canada-68991796
+[2024-05-12T13:30:47.331+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/articles/crgy7xypwj8o
+[2024-05-12T13:30:47.332+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/articles/crgy7xypwj8o
+[2024-05-12T13:30:47.502+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/world-us-canada-68993672
+[2024-05-12T13:30:47.504+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/world-us-canada-68993672
+[2024-05-12T13:30:47.678+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/future/article/20240510-change-6-is-just-the-tip-of-chinas-space-ambitions
+[2024-05-12T13:30:47.680+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/future/article/20240510-change-6-is-just-the-tip-of-chinas-space-ambitions
+[2024-05-12T13:30:47.856+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/culture/article/20240510-abba-was-somewhat-of-a-dirty-word-how-the-pop-bands-1974-eurovision-win-divided-sweden
+[2024-05-12T13:30:47.860+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/culture/article/20240510-abba-was-somewhat-of-a-dirty-word-how-the-pop-bands-1974-eurovision-win-divided-sweden
+[2024-05-12T13:30:48.045+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/articles/cyxepvdewkno
+[2024-05-12T13:30:48.047+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/articles/cyxepvdewkno
+[2024-05-12T13:30:48.219+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/articles/c4n1l9g2wn9o
+[2024-05-12T13:30:48.221+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/articles/c4n1l9g2wn9o
+[2024-05-12T13:30:48.796+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/world-asia-india-68767574
+[2024-05-12T13:30:48.798+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/world-asia-india-68767574
+[2024-05-12T13:30:48.965+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/world-asia-china-68982645
+[2024-05-12T13:30:48.966+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/world-asia-china-68982645
+[2024-05-12T13:30:49.131+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/articles/c4n1l9g2wn9o
+[2024-05-12T13:30:49.132+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/articles/c4n1l9g2wn9o
+[2024-05-12T13:30:49.300+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/world-asia-india-68968593
+[2024-05-12T13:30:49.301+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/world-asia-india-68968593
+[2024-05-12T13:30:51.373+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/travel/article/20240510-an-insiders-guide-to-san-franciscos-mission-district
+[2024-05-12T13:30:51.375+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/travel/article/20240510-an-insiders-guide-to-san-franciscos-mission-district
+[2024-05-12T13:30:51.542+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/in-pictures-68995685
+[2024-05-12T13:30:51.543+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/in-pictures-68995685
+[2024-05-12T13:30:51.710+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/uk-politics-68999212
+[2024-05-12T13:30:51.712+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/uk-politics-68999212
+[2024-05-12T13:30:52.116+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/world-middle-east-68998654
+[2024-05-12T13:30:52.118+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/world-middle-east-68998654
+[2024-05-12T13:30:52.292+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/articles/cer3mr09vzxo
+[2024-05-12T13:30:52.294+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/articles/cer3mr09vzxo
+[2024-05-12T13:30:52.460+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/world-europe-68998913
+[2024-05-12T13:30:52.462+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/world-europe-68998913
+[2024-05-12T13:30:52.634+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/world-europe-68994877
+[2024-05-12T13:30:52.635+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/world-europe-68994877
+[2024-05-12T13:30:52.802+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/articles/c6pyv8q94g1o
+[2024-05-12T13:30:52.804+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/articles/c6pyv8q94g1o
+[2024-05-12T13:30:52.970+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/articles/c4n1j0l8111o
+[2024-05-12T13:30:52.972+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/articles/c4n1j0l8111o
+[2024-05-12T13:30:53.141+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/articles/c4n1l9g2wn9o
+[2024-05-12T13:30:53.142+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/articles/c4n1l9g2wn9o
+[2024-05-12T13:30:53.327+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/world-us-canada-68991796
+[2024-05-12T13:30:53.329+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/world-us-canada-68991796
+[2024-05-12T13:30:53.496+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/world-us-canada-68996066
+[2024-05-12T13:30:53.498+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/world-us-canada-68996066
+[2024-05-12T13:30:53.684+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/world-us-canada-68996062
+[2024-05-12T13:30:53.685+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/world-us-canada-68996062
+[2024-05-12T13:30:53.858+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/articles/cyxepvdewkno
+[2024-05-12T13:30:53.860+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/articles/cyxepvdewkno
+[2024-05-12T13:30:54.031+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/articles/crgy7xypwj8o
+[2024-05-12T13:30:54.032+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/articles/crgy7xypwj8o
+[2024-05-12T13:30:54.203+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/articles/c4n1wze72kdo
+[2024-05-12T13:30:54.205+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/articles/c4n1wze72kdo
+[2024-05-12T13:30:54.386+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/world-asia-68994876
+[2024-05-12T13:30:54.388+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/world-asia-68994876
+[2024-05-12T13:30:54.797+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/world-australia-68871869
+[2024-05-12T13:30:54.798+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/world-australia-68871869
+[2024-05-12T13:30:54.966+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/world-australia-68989354
+[2024-05-12T13:30:54.968+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/world-australia-68989354
+[2024-05-12T13:30:55.367+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/articles/cjq5gky4e5no
+[2024-05-12T13:30:55.368+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/articles/cjq5gky4e5no
+[2024-05-12T13:30:55.777+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/articles/cll451q4l55o
+[2024-05-12T13:30:55.779+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/articles/cll451q4l55o
+[2024-05-12T13:30:55.968+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/uk-politics-68999212
+[2024-05-12T13:30:55.970+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/uk-politics-68999212
+[2024-05-12T13:30:56.370+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/uk-politics-68999212
+[2024-05-12T13:30:56.372+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/uk-politics-68999212
+[2024-05-12T13:30:56.537+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/world-middle-east-68998654
+[2024-05-12T13:30:56.539+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/world-middle-east-68998654
+[2024-05-12T13:30:56.706+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/articles/c51n40vp800o
+[2024-05-12T13:30:56.707+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/articles/c51n40vp800o
+[2024-05-12T13:30:56.876+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/articles/cer3mr09vzxo
+[2024-05-12T13:30:56.877+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/articles/cer3mr09vzxo
+[2024-05-12T13:30:57.043+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/articles/c4n1jwel080o
+[2024-05-12T13:30:57.045+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/articles/c4n1jwel080o
+[2024-05-12T13:30:57.212+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/articles/c51n5lppw8vo
+[2024-05-12T13:30:57.214+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/articles/c51n5lppw8vo
+[2024-05-12T13:30:57.383+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/articles/cd1353v5p5xo
+[2024-05-12T13:30:57.384+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/articles/cd1353v5p5xo
+[2024-05-12T13:30:57.550+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/articles/c99z7wwq1lgo
+[2024-05-12T13:30:57.551+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/articles/c99z7wwq1lgo
+[2024-05-12T13:30:57.948+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/articles/cv2j0v237vko
+[2024-05-12T13:30:57.950+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/articles/cv2j0v237vko
+[2024-05-12T13:30:58.122+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/business-68983741
+[2024-05-12T13:30:58.123+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/business-68983741
+[2024-05-12T13:30:58.290+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/articles/cmm3gzz1dj3o
+[2024-05-12T13:30:58.291+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/articles/cmm3gzz1dj3o
+[2024-05-12T13:30:58.458+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/articles/cpwg2gv3vp5o
+[2024-05-12T13:30:58.460+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/articles/cpwg2gv3vp5o
+[2024-05-12T13:30:58.638+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/articles/cv2j18le9e3o
+[2024-05-12T13:30:58.640+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/articles/cv2j18le9e3o
+[2024-05-12T13:30:58.832+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/future/article/20240510-how-sci-fi-writer-jg-ballards-computer-poems-predicted-chatgpt
+[2024-05-12T13:30:58.834+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/future/article/20240510-how-sci-fi-writer-jg-ballards-computer-poems-predicted-chatgpt
+[2024-05-12T13:30:59.238+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/technology-68972855
+[2024-05-12T13:30:59.240+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/technology-68972855
+[2024-05-12T13:30:59.407+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/articles/c03drw23zewo
+[2024-05-12T13:30:59.408+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/articles/c03drw23zewo
+[2024-05-12T13:30:59.588+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/entertainment-arts-68993726
+[2024-05-12T13:30:59.589+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/entertainment-arts-68993726
+[2024-05-12T13:30:59.768+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/culture/article/20240510-abba-was-somewhat-of-a-dirty-word-how-the-pop-bands-1974-eurovision-win-divided-sweden
+[2024-05-12T13:30:59.769+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/culture/article/20240510-abba-was-somewhat-of-a-dirty-word-how-the-pop-bands-1974-eurovision-win-divided-sweden
+[2024-05-12T13:30:59.940+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/world-us-canada-68993672
+[2024-05-12T13:30:59.942+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/world-us-canada-68993672
+[2024-05-12T13:31:01.224+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/in-pictures-68995685
+[2024-05-12T13:31:01.225+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/in-pictures-68995685
+[2024-05-12T13:31:01.392+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/articles/c4n1wze72kdo
+[2024-05-12T13:31:01.393+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/articles/c4n1wze72kdo
+[2024-05-12T13:31:01.560+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/articles/c4n104z0xklo
+[2024-05-12T13:31:01.562+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/articles/c4n104z0xklo
+[2024-05-12T13:31:01.729+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/world-latin-america-68979430
+[2024-05-12T13:31:01.730+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/world-latin-america-68979430
+[2024-05-12T13:31:01.898+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/articles/c1ej1kk0d88o
+[2024-05-12T13:31:01.899+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/articles/c1ej1kk0d88o
+[2024-05-12T13:31:02.298+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/news/health-68992772
+[2024-05-12T13:31:02.299+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/news/health-68992772
+[2024-05-12T13:31:02.734+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/travel/article/20240504-guacachile-a-time-honoured-guacamole-lookalike
+[2024-05-12T13:31:02.736+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/travel/article/20240504-guacachile-a-time-honoured-guacamole-lookalike
+[2024-05-12T13:31:02.910+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/travel/article/20240426-from-ancient-egypt-to-roman-britain-brewers-are-reviving-beers-from-the-past
+[2024-05-12T13:31:02.911+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/travel/article/20240426-from-ancient-egypt-to-roman-britain-brewers-are-reviving-beers-from-the-past
+[2024-05-12T13:31:03.093+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/travel/article/20240421-matzah-ball-soup-a-new-take-on-a-jewish-classic
+[2024-05-12T13:31:03.094+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/travel/article/20240421-matzah-ball-soup-a-new-take-on-a-jewish-classic
+[2024-05-12T13:31:03.262+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/travel/article/20240418-the-ingenious-wines-birthed-from-black-volcanic-craters
+[2024-05-12T13:31:03.263+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/travel/article/20240418-the-ingenious-wines-birthed-from-black-volcanic-craters
+[2024-05-12T13:31:03.432+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/travel/article/20240510-siquijor-a-paradise-island-with-a-reputation-for-witchcraft
+[2024-05-12T13:31:03.433+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/travel/article/20240510-siquijor-a-paradise-island-with-a-reputation-for-witchcraft
+[2024-05-12T13:31:03.631+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/travel/article/20240508-a-solution-for-working-parents-who-want-to-travel
+[2024-05-12T13:31:03.633+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/travel/article/20240508-a-solution-for-working-parents-who-want-to-travel
+[2024-05-12T13:31:03.807+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/travel/article/20240508-celebrity-chef-alexandre-mazzias-favourite-ways-to-enjoy-marseille-during-the-olympics-and-beyond
+[2024-05-12T13:31:03.808+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/travel/article/20240508-celebrity-chef-alexandre-mazzias-favourite-ways-to-enjoy-marseille-during-the-olympics-and-beyond
+[2024-05-12T13:31:03.983+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.bbc.com/travel/article/20240508-labyrinth-walking-an-ancient-activity-that-could-help-ease-anxiety
+[2024-05-12T13:31:03.984+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.bbc.com/travel/article/20240508-labyrinth-walking-an-ancient-activity-that-could-help-ease-anxiety
+[2024-05-12T13:31:13.208+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.dawn.com/news/1833050/no-such-thing-as-strategic-state-owned-enterprises-says-finance-minister-aurangzeb
+[2024-05-12T13:31:13.210+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.dawn.com/news/1833050/no-such-thing-as-strategic-state-owned-enterprises-says-finance-minister-aurangzeb
+[2024-05-12T13:31:18.611+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.dawn.com/news/1833052/fight-till-the-last-ball-pcb-chief-tells-cricket-team-in-dublin
+[2024-05-12T13:31:18.613+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.dawn.com/news/1833052/fight-till-the-last-ball-pcb-chief-tells-cricket-team-in-dublin
+[2024-05-12T13:31:28.440+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.dawn.com/news/1833042/canada-arrests-fourth-indian-national-in-killing-of-sikh-activist
+[2024-05-12T13:31:28.441+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.dawn.com/news/1833042/canada-arrests-fourth-indian-national-in-killing-of-sikh-activist
+[2024-05-12T13:31:29.321+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.dawn.com/news/1833046/second-night-of-auroras-seen-amid-extreme-solar-storm
+[2024-05-12T13:31:29.323+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.dawn.com/news/1833046/second-night-of-auroras-seen-amid-extreme-solar-storm
+[2024-05-12T13:31:36.763+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.dawn.com/news/1832980/govt-hints-at-raising-wheat-purchase-target
+[2024-05-12T13:31:36.765+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.dawn.com/news/1832980/govt-hints-at-raising-wheat-purchase-target
+[2024-05-12T13:31:40.410+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.youtube.com/watch?v=UeSr8kxz7kE
+[2024-05-12T13:31:40.412+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.youtube.com/watch?v=UeSr8kxz7kE
+[2024-05-12T13:31:41.573+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.youtube.com/watch?v=DLnFKstpqSM
+[2024-05-12T13:31:41.574+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.youtube.com/watch?v=DLnFKstpqSM
+[2024-05-12T13:31:42.693+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.youtube.com/watch?v=ax6GtKBV4o4
+[2024-05-12T13:31:42.695+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.youtube.com/watch?v=ax6GtKBV4o4
+[2024-05-12T13:31:43.878+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.youtube.com/watch?v=6Y6pv4dgwok
+[2024-05-12T13:31:43.879+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.youtube.com/watch?v=6Y6pv4dgwok
+[2024-05-12T13:31:45.079+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.youtube.com/watch?v=368pk1LtbvY
+[2024-05-12T13:31:45.080+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.youtube.com/watch?v=368pk1LtbvY
+[2024-05-12T13:31:46.280+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.youtube.com/watch?v=ZKNxVl6yFyc
+[2024-05-12T13:31:46.282+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.youtube.com/watch?v=ZKNxVl6yFyc
+[2024-05-12T13:31:47.524+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.youtube.com/watch?v=1j9DKEupIUY
+[2024-05-12T13:31:47.526+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.youtube.com/watch?v=1j9DKEupIUY
+[2024-05-12T13:31:48.718+0000] {mlops_dag.py:33} WARNING - No valid title or description for URL: https://www.youtube.com/watch?v=2FbxyFxRHdM
+[2024-05-12T13:31:48.719+0000] {mlops_dag.py:71} INFO - No data extracted for https://www.youtube.com/watch?v=2FbxyFxRHdM
+[2024-05-12T13:31:55.092+0000] {local_task_job_runner.py:310} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2024-05-12T13:31:55.093+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2024-05-12T13:31:55.095+0000] {process_utils.py:132} INFO - Sending 15 to group 2561. PIDs of all processes in the group: [2561]
+[2024-05-12T13:31:55.095+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 2561
+[2024-05-12T13:31:55.096+0000] {taskinstance.py:2611} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-05-12T13:31:55.097+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-12T13:31:55.148+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=2561, status='terminated', exitcode=0, started='13:30:44') (2561) terminated with exit code 0

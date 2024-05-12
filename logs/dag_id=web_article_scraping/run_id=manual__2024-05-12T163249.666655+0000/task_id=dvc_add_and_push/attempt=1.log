@@ -1,0 +1,57 @@
+[2024-05-12T16:33:06.291+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-12T16:33:06.309+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: web_article_scraping.dvc_add_and_push manual__2024-05-12T16:32:49.666655+00:00 [queued]>
+[2024-05-12T16:33:06.317+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: web_article_scraping.dvc_add_and_push manual__2024-05-12T16:32:49.666655+00:00 [queued]>
+[2024-05-12T16:33:06.318+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-05-12T16:33:06.332+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): dvc_add_and_push> on 2024-05-12 16:32:49.666655+00:00
+[2024-05-12T16:33:06.337+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=781) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-05-12T16:33:06.338+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'web_article_scraping', 'dvc_add_and_push', 'manual__2024-05-12T16:32:49.666655+00:00', '--job-id', '144', '--raw', '--subdir', 'DAGS_FOLDER/mlops_dag.py', '--cfg-path', '/tmp/tmpskiiz9bc']
+[2024-05-12T16:33:06.339+0000] {standard_task_runner.py:63} INFO - Started process 783 to run task
+[2024-05-12T16:33:06.339+0000] {standard_task_runner.py:91} INFO - Job 144: Subtask dvc_add_and_push
+[2024-05-12T16:33:06.378+0000] {task_command.py:426} INFO - Running <TaskInstance: web_article_scraping.dvc_add_and_push manual__2024-05-12T16:32:49.666655+00:00 [running]> on host d64c2340cf7b
+[2024-05-12T16:33:06.450+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='web_article_scraping' AIRFLOW_CTX_TASK_ID='dvc_add_and_push' AIRFLOW_CTX_EXECUTION_DATE='2024-05-12T16:32:49.666655+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-12T16:32:49.666655+00:00'
+[2024-05-12T16:33:06.452+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-12T16:33:06.453+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-05-12T16:33:06.454+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\ncd /opt/***/dags\ndvc init -f --no-scm && dvc remote add -d mygoogleDrive gdrive://1akLltC_11ZTBzZF-D4cZt_sZIf-jheJE && dvc add extracted_data.csv && dvc push -r mygoogleDrive']
+[2024-05-12T16:33:06.468+0000] {subprocess.py:86} INFO - Output:
+[2024-05-12T16:33:07.792+0000] {subprocess.py:93} INFO - Initialized DVC repository.
+[2024-05-12T16:33:07.793+0000] {subprocess.py:93} INFO - 
+[2024-05-12T16:33:07.798+0000] {subprocess.py:93} INFO - +---------------------------------------------------------------------+
+[2024-05-12T16:33:07.799+0000] {subprocess.py:93} INFO - |                                                                     |
+[2024-05-12T16:33:07.799+0000] {subprocess.py:93} INFO - |        DVC has enabled anonymous aggregate usage analytics.         |
+[2024-05-12T16:33:07.799+0000] {subprocess.py:93} INFO - |     Read the analytics documentation (and how to opt-out) here:     |
+[2024-05-12T16:33:07.800+0000] {subprocess.py:93} INFO - |             <https://dvc.org/doc/user-guide/analytics>              |
+[2024-05-12T16:33:07.800+0000] {subprocess.py:93} INFO - |                                                                     |
+[2024-05-12T16:33:07.801+0000] {subprocess.py:93} INFO - +---------------------------------------------------------------------+
+[2024-05-12T16:33:07.801+0000] {subprocess.py:93} INFO - 
+[2024-05-12T16:33:07.801+0000] {subprocess.py:93} INFO - What's next?
+[2024-05-12T16:33:07.802+0000] {subprocess.py:93} INFO - ------------
+[2024-05-12T16:33:07.803+0000] {subprocess.py:93} INFO - - Check out the documentation: <https://dvc.org/doc>
+[2024-05-12T16:33:07.803+0000] {subprocess.py:93} INFO - - Get help and share ideas: <https://dvc.org/chat>
+[2024-05-12T16:33:07.804+0000] {subprocess.py:93} INFO - - Star us on GitHub: <https://github.com/iterative/dvc>
+[2024-05-12T16:33:08.869+0000] {subprocess.py:93} INFO - Setting 'mygoogledrive' as a default remote.
+[2024-05-12T16:33:11.735+0000] {subprocess.py:93} INFO - ERROR: unexpected error - gdrive is supported, but requires 'dvc-gdrive' to be installed: No module named 'dvc_gdrive'
+[2024-05-12T16:33:11.736+0000] {subprocess.py:93} INFO - 
+[2024-05-12T16:33:11.737+0000] {subprocess.py:93} INFO - Having any troubles? Hit us up at https://dvc.org/support, we are always happy to help!
+[2024-05-12T16:33:11.916+0000] {subprocess.py:97} INFO - Command exited with return code 255
+[2024-05-12T16:33:11.917+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-12T16:33:11.926+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 255.
+[2024-05-12T16:33:11.930+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=web_article_scraping, task_id=dvc_add_and_push, run_id=manual__2024-05-12T16:32:49.666655+00:00, execution_date=20240512T163249, start_date=20240512T163306, end_date=20240512T163311
+[2024-05-12T16:33:11.948+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 144 for task dvc_add_and_push (Bash command failed. The command returned a non-zero exit code 255.; 783)
+[2024-05-12T16:33:11.970+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-05-12T16:33:11.984+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-05-12T16:33:11.986+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

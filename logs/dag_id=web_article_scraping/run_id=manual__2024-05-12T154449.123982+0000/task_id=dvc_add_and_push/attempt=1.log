@@ -1,0 +1,213 @@
+[2024-05-12T15:45:05.322+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-12T15:45:05.353+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: web_article_scraping.dvc_add_and_push manual__2024-05-12T15:44:49.123982+00:00 [queued]>
+[2024-05-12T15:45:05.360+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: web_article_scraping.dvc_add_and_push manual__2024-05-12T15:44:49.123982+00:00 [queued]>
+[2024-05-12T15:45:05.360+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-05-12T15:45:05.372+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): dvc_add_and_push> on 2024-05-12 15:44:49.123982+00:00
+[2024-05-12T15:45:05.377+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=4631) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-05-12T15:45:05.378+0000] {standard_task_runner.py:63} INFO - Started process 4633 to run task
+[2024-05-12T15:45:05.378+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'web_article_scraping', 'dvc_add_and_push', 'manual__2024-05-12T15:44:49.123982+00:00', '--job-id', '97', '--raw', '--subdir', 'DAGS_FOLDER/mlops_dag.py', '--cfg-path', '/tmp/tmp6cwf41pv']
+[2024-05-12T15:45:05.379+0000] {standard_task_runner.py:91} INFO - Job 97: Subtask dvc_add_and_push
+[2024-05-12T15:45:05.415+0000] {task_command.py:426} INFO - Running <TaskInstance: web_article_scraping.dvc_add_and_push manual__2024-05-12T15:44:49.123982+00:00 [running]> on host 8b349270b58a
+[2024-05-12T15:45:05.480+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='web_article_scraping' AIRFLOW_CTX_TASK_ID='dvc_add_and_push' AIRFLOW_CTX_EXECUTION_DATE='2024-05-12T15:44:49.123982+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-12T15:44:49.123982+00:00'
+[2024-05-12T15:45:05.482+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-12T15:45:05.483+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-05-12T15:45:05.483+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', "\npip install dvc 'fsspec==2023.12.2' && apt-get update && apt-get install git -y && dvc remote add -d mygoogleDrive gdrive://1akLltC_11ZTBzZF-D4cZt_sZIf-jheJE && dvc add extracted_data.csv && git add . && git commit -m 'committed via ***' && dvc push -r mygoogleDrive && git push"]
+[2024-05-12T15:45:05.493+0000] {subprocess.py:86} INFO - Output:
+[2024-05-12T15:45:06.455+0000] {subprocess.py:93} INFO - Requirement already satisfied: dvc in /home/***/.local/lib/python3.12/site-packages (3.50.1)
+[2024-05-12T15:45:06.650+0000] {subprocess.py:93} INFO - Collecting fsspec==2023.12.2
+[2024-05-12T15:45:06.818+0000] {subprocess.py:93} INFO -   Downloading fsspec-2023.12.2-py3-none-any.whl.metadata (6.8 kB)
+[2024-05-12T15:45:06.913+0000] {subprocess.py:93} INFO - Requirement already satisfied: attrs>=22.2.0 in /home/***/.local/lib/python3.12/site-packages (from dvc) (23.2.0)
+[2024-05-12T15:45:06.915+0000] {subprocess.py:93} INFO - Requirement already satisfied: celery in /home/***/.local/lib/python3.12/site-packages (from dvc) (5.4.0)
+[2024-05-12T15:45:06.917+0000] {subprocess.py:93} INFO - Requirement already satisfied: colorama>=0.3.9 in /home/***/.local/lib/python3.12/site-packages (from dvc) (0.4.6)
+[2024-05-12T15:45:06.918+0000] {subprocess.py:93} INFO - Requirement already satisfied: configobj>=5.0.6 in /home/***/.local/lib/python3.12/site-packages (from dvc) (5.0.8)
+[2024-05-12T15:45:06.919+0000] {subprocess.py:93} INFO - Requirement already satisfied: distro>=1.3 in /home/***/.local/lib/python3.12/site-packages (from dvc) (1.9.0)
+[2024-05-12T15:45:06.920+0000] {subprocess.py:93} INFO - Requirement already satisfied: dpath<3,>=2.1.0 in /home/***/.local/lib/python3.12/site-packages (from dvc) (2.1.6)
+[2024-05-12T15:45:06.921+0000] {subprocess.py:93} INFO - Requirement already satisfied: dulwich in /home/***/.local/lib/python3.12/site-packages (from dvc) (0.22.1)
+[2024-05-12T15:45:06.922+0000] {subprocess.py:93} INFO - Requirement already satisfied: dvc-data<3.16,>=3.15 in /home/***/.local/lib/python3.12/site-packages (from dvc) (3.15.1)
+[2024-05-12T15:45:06.923+0000] {subprocess.py:93} INFO - Requirement already satisfied: dvc-http>=2.29.0 in /home/***/.local/lib/python3.12/site-packages (from dvc) (2.32.0)
+[2024-05-12T15:45:06.924+0000] {subprocess.py:93} INFO - Requirement already satisfied: dvc-objects in /home/***/.local/lib/python3.12/site-packages (from dvc) (5.1.0)
+[2024-05-12T15:45:06.925+0000] {subprocess.py:93} INFO - Requirement already satisfied: dvc-render<2,>=1.0.1 in /home/***/.local/lib/python3.12/site-packages (from dvc) (1.0.2)
+[2024-05-12T15:45:06.927+0000] {subprocess.py:93} INFO - Requirement already satisfied: dvc-studio-client<1,>=0.20 in /home/***/.local/lib/python3.12/site-packages (from dvc) (0.20.0)
+[2024-05-12T15:45:06.929+0000] {subprocess.py:93} INFO - Requirement already satisfied: dvc-task<1,>=0.3.0 in /home/***/.local/lib/python3.12/site-packages (from dvc) (0.4.0)
+[2024-05-12T15:45:06.930+0000] {subprocess.py:93} INFO - Requirement already satisfied: flatten-dict<1,>=0.4.1 in /home/***/.local/lib/python3.12/site-packages (from dvc) (0.4.2)
+[2024-05-12T15:45:06.932+0000] {subprocess.py:93} INFO - Requirement already satisfied: flufl.lock<8,>=5 in /home/***/.local/lib/python3.12/site-packages (from dvc) (7.1.1)
+[2024-05-12T15:45:06.934+0000] {subprocess.py:93} INFO - Requirement already satisfied: funcy>=1.14 in /home/***/.local/lib/python3.12/site-packages (from dvc) (2.0)
+[2024-05-12T15:45:06.935+0000] {subprocess.py:93} INFO - Requirement already satisfied: grandalf<1,>=0.7 in /home/***/.local/lib/python3.12/site-packages (from dvc) (0.8)
+[2024-05-12T15:45:06.936+0000] {subprocess.py:93} INFO - Requirement already satisfied: gto<2,>=1.6.0 in /home/***/.local/lib/python3.12/site-packages (from dvc) (1.7.1)
+[2024-05-12T15:45:06.937+0000] {subprocess.py:93} INFO - Requirement already satisfied: hydra-core>=1.1 in /home/***/.local/lib/python3.12/site-packages (from dvc) (1.3.2)
+[2024-05-12T15:45:06.939+0000] {subprocess.py:93} INFO - Requirement already satisfied: iterative-telemetry>=0.0.7 in /home/***/.local/lib/python3.12/site-packages (from dvc) (0.0.8)
+[2024-05-12T15:45:06.940+0000] {subprocess.py:93} INFO - Requirement already satisfied: kombu in /home/***/.local/lib/python3.12/site-packages (from dvc) (5.3.7)
+[2024-05-12T15:45:06.941+0000] {subprocess.py:93} INFO - Requirement already satisfied: networkx>=2.5 in /home/***/.local/lib/python3.12/site-packages (from dvc) (3.3)
+[2024-05-12T15:45:06.942+0000] {subprocess.py:93} INFO - Requirement already satisfied: omegaconf in /home/***/.local/lib/python3.12/site-packages (from dvc) (2.3.0)
+[2024-05-12T15:45:06.943+0000] {subprocess.py:93} INFO - Requirement already satisfied: packaging>=19 in /home/***/.local/lib/python3.12/site-packages (from dvc) (24.0)
+[2024-05-12T15:45:06.945+0000] {subprocess.py:93} INFO - Requirement already satisfied: pathspec>=0.10.3 in /home/***/.local/lib/python3.12/site-packages (from dvc) (0.12.1)
+[2024-05-12T15:45:06.946+0000] {subprocess.py:93} INFO - Requirement already satisfied: platformdirs<4,>=3.1.1 in /home/***/.local/lib/python3.12/site-packages (from dvc) (3.11.0)
+[2024-05-12T15:45:06.948+0000] {subprocess.py:93} INFO - Requirement already satisfied: psutil>=5.8 in /home/***/.local/lib/python3.12/site-packages (from dvc) (5.9.8)
+[2024-05-12T15:45:06.950+0000] {subprocess.py:93} INFO - Requirement already satisfied: pydot>=1.2.4 in /home/***/.local/lib/python3.12/site-packages (from dvc) (2.0.0)
+[2024-05-12T15:45:06.951+0000] {subprocess.py:93} INFO - Requirement already satisfied: pygtrie>=2.3.2 in /home/***/.local/lib/python3.12/site-packages (from dvc) (2.5.0)
+[2024-05-12T15:45:06.952+0000] {subprocess.py:93} INFO - Requirement already satisfied: pyparsing>=2.4.7 in /home/***/.local/lib/python3.12/site-packages (from dvc) (3.1.2)
+[2024-05-12T15:45:06.953+0000] {subprocess.py:93} INFO - Requirement already satisfied: requests>=2.22 in /home/***/.local/lib/python3.12/site-packages (from dvc) (2.31.0)
+[2024-05-12T15:45:06.955+0000] {subprocess.py:93} INFO - Requirement already satisfied: rich>=12 in /home/***/.local/lib/python3.12/site-packages (from dvc) (13.7.1)
+[2024-05-12T15:45:06.956+0000] {subprocess.py:93} INFO - Requirement already satisfied: ruamel.yaml>=0.17.11 in /home/***/.local/lib/python3.12/site-packages (from dvc) (0.18.6)
+[2024-05-12T15:45:06.957+0000] {subprocess.py:93} INFO - Requirement already satisfied: scmrepo<4,>=3.3.2 in /home/***/.local/lib/python3.12/site-packages (from dvc) (3.3.2)
+[2024-05-12T15:45:06.959+0000] {subprocess.py:93} INFO - Requirement already satisfied: shortuuid>=0.5 in /home/***/.local/lib/python3.12/site-packages (from dvc) (1.0.13)
+[2024-05-12T15:45:06.960+0000] {subprocess.py:93} INFO - Requirement already satisfied: shtab<2,>=1.3.4 in /home/***/.local/lib/python3.12/site-packages (from dvc) (1.7.1)
+[2024-05-12T15:45:06.963+0000] {subprocess.py:93} INFO - Requirement already satisfied: tabulate>=0.8.7 in /home/***/.local/lib/python3.12/site-packages (from dvc) (0.9.0)
+[2024-05-12T15:45:06.964+0000] {subprocess.py:93} INFO - Requirement already satisfied: tomlkit>=0.11.1 in /home/***/.local/lib/python3.12/site-packages (from dvc) (0.12.4)
+[2024-05-12T15:45:06.968+0000] {subprocess.py:93} INFO - Requirement already satisfied: tqdm<5,>=4.63.1 in /home/***/.local/lib/python3.12/site-packages (from dvc) (4.66.4)
+[2024-05-12T15:45:06.970+0000] {subprocess.py:93} INFO - Requirement already satisfied: voluptuous>=0.11.7 in /home/***/.local/lib/python3.12/site-packages (from dvc) (0.14.2)
+[2024-05-12T15:45:06.971+0000] {subprocess.py:93} INFO - Requirement already satisfied: zc.lockfile>=1.2.1 in /home/***/.local/lib/python3.12/site-packages (from dvc) (3.0.post1)
+[2024-05-12T15:45:06.992+0000] {subprocess.py:93} INFO - Requirement already satisfied: six in /home/***/.local/lib/python3.12/site-packages (from configobj>=5.0.6->dvc) (1.16.0)
+[2024-05-12T15:45:07.022+0000] {subprocess.py:93} INFO - Requirement already satisfied: dictdiffer>=0.8.1 in /home/***/.local/lib/python3.12/site-packages (from dvc-data<3.16,>=3.15->dvc) (0.9.0)
+[2024-05-12T15:45:07.030+0000] {subprocess.py:93} INFO - INFO: pip is looking at multiple versions of dvc-data to determine which version is compatible with other requirements. This could take a while.
+[2024-05-12T15:45:07.174+0000] {subprocess.py:93} INFO - Collecting dvc-data<3.16,>=3.15 (from dvc)
+[2024-05-12T15:45:07.533+0000] {subprocess.py:93} INFO -   Downloading dvc_data-3.15.0-py3-none-any.whl.metadata (5.0 kB)
+[2024-05-12T15:45:07.825+0000] {subprocess.py:93} INFO - Collecting dvc
+[2024-05-12T15:45:07.826+0000] {subprocess.py:93} INFO -   Using cached dvc-3.50.1-py3-none-any.whl.metadata (17 kB)
+[2024-05-12T15:45:08.341+0000] {subprocess.py:93} INFO -   Downloading dvc-3.50.0-py3-none-any.whl.metadata (17 kB)
+[2024-05-12T15:45:08.801+0000] {subprocess.py:93} INFO -   Downloading dvc-3.49.0-py3-none-any.whl.metadata (17 kB)
+[2024-05-12T15:45:08.920+0000] {subprocess.py:93} INFO - INFO: pip is still looking at multiple versions of dvc-data to determine which version is compatible with other requirements. This could take a while.
+[2024-05-12T15:45:09.253+0000] {subprocess.py:93} INFO -   Downloading dvc-3.48.4-py3-none-any.whl.metadata (17 kB)
+[2024-05-12T15:45:09.348+0000] {subprocess.py:93} INFO - Collecting dvc-data<3.15,>=3.13 (from dvc)
+[2024-05-12T15:45:09.638+0000] {subprocess.py:93} INFO -   Downloading dvc_data-3.14.1-py3-none-any.whl.metadata (5.0 kB)
+[2024-05-12T15:45:10.000+0000] {subprocess.py:93} INFO -   Downloading dvc_data-3.14.0-py3-none-any.whl.metadata (5.0 kB)
+[2024-05-12T15:45:10.365+0000] {subprocess.py:93} INFO -   Downloading dvc_data-3.13.0-py3-none-any.whl.metadata (5.0 kB)
+[2024-05-12T15:45:10.439+0000] {subprocess.py:93} INFO - Collecting dvc
+[2024-05-12T15:45:10.749+0000] {subprocess.py:93} INFO -   Downloading dvc-3.48.3-py3-none-any.whl.metadata (17 kB)
+[2024-05-12T15:45:10.859+0000] {subprocess.py:93} INFO - INFO: This is taking longer than usual. You might need to provide the dependency resolver with stricter constraints to reduce runtime. See https://pip.pypa.io/warnings/backtracking for guidance. If you want to abort this run, press Ctrl + C.
+[2024-05-12T15:45:11.239+0000] {subprocess.py:93} INFO -   Downloading dvc-3.48.2-py3-none-any.whl.metadata (17 kB)
+[2024-05-12T15:45:11.699+0000] {subprocess.py:93} INFO -   Downloading dvc-3.48.1-py3-none-any.whl.metadata (17 kB)
+[2024-05-12T15:45:12.188+0000] {subprocess.py:93} INFO -   Downloading dvc-3.48.0-py3-none-any.whl.metadata (17 kB)
+[2024-05-12T15:45:12.647+0000] {subprocess.py:93} INFO -   Downloading dvc-3.47.0-py3-none-any.whl.metadata (17 kB)
+[2024-05-12T15:45:13.134+0000] {subprocess.py:93} INFO -   Downloading dvc-3.46.0-py3-none-any.whl.metadata (17 kB)
+[2024-05-12T15:45:13.599+0000] {subprocess.py:93} INFO -   Downloading dvc-3.45.0-py3-none-any.whl.metadata (17 kB)
+[2024-05-12T15:45:14.061+0000] {subprocess.py:93} INFO -   Downloading dvc-3.44.0-py3-none-any.whl.metadata (17 kB)
+[2024-05-12T15:45:14.157+0000] {subprocess.py:93} INFO - Collecting dvc-data<3.12,>=3.10 (from dvc)
+[2024-05-12T15:45:14.473+0000] {subprocess.py:93} INFO -   Downloading dvc_data-3.11.0-py3-none-any.whl.metadata (5.0 kB)
+[2024-05-12T15:45:14.877+0000] {subprocess.py:93} INFO -   Downloading dvc_data-3.10.0-py3-none-any.whl.metadata (5.0 kB)
+[2024-05-12T15:45:14.989+0000] {subprocess.py:93} INFO - Collecting dvc-objects<5,>=4.0.1 (from dvc-data<3.12,>=3.10->dvc)
+[2024-05-12T15:45:15.287+0000] {subprocess.py:93} INFO -   Downloading dvc_objects-4.0.1-py3-none-any.whl.metadata (3.9 kB)
+[2024-05-12T15:45:15.352+0000] {subprocess.py:93} INFO - Collecting dvc
+[2024-05-12T15:45:15.716+0000] {subprocess.py:93} INFO -   Downloading dvc-3.43.1-py3-none-any.whl.metadata (17 kB)
+[2024-05-12T15:45:15.827+0000] {subprocess.py:93} INFO - Collecting dvc-data<3.10,>=3.9 (from dvc)
+[2024-05-12T15:45:16.188+0000] {subprocess.py:93} INFO -   Downloading dvc_data-3.9.0-py3-none-any.whl.metadata (5.0 kB)
+[2024-05-12T15:45:16.282+0000] {subprocess.py:93} INFO - Collecting scmrepo<3,>=2.0.2 (from dvc)
+[2024-05-12T15:45:16.590+0000] {subprocess.py:93} INFO -   Downloading scmrepo-2.1.1-py3-none-any.whl.metadata (4.8 kB)
+[2024-05-12T15:45:16.644+0000] {subprocess.py:93} INFO - Collecting dvc-objects<4,>=3 (from dvc-data<3.10,>=3.9->dvc)
+[2024-05-12T15:45:17.005+0000] {subprocess.py:93} INFO -   Downloading dvc_objects-3.0.6-py3-none-any.whl.metadata (3.9 kB)
+[2024-05-12T15:45:17.016+0000] {subprocess.py:93} INFO - Requirement already satisfied: diskcache>=5.2.1 in /home/***/.local/lib/python3.12/site-packages (from dvc-data<3.10,>=3.9->dvc) (5.6.3)
+[2024-05-12T15:45:17.017+0000] {subprocess.py:93} INFO - Requirement already satisfied: sqltrie<1,>=0.11.0 in /home/***/.local/lib/python3.12/site-packages (from dvc-data<3.10,>=3.9->dvc) (0.11.0)
+[2024-05-12T15:45:17.036+0000] {subprocess.py:93} INFO - Requirement already satisfied: aiohttp-retry>=2.5.0 in /home/***/.local/lib/python3.12/site-packages (from dvc-http>=2.29.0->dvc) (2.8.3)
+[2024-05-12T15:45:17.115+0000] {subprocess.py:93} INFO - Requirement already satisfied: atpublic>=2.3 in /home/***/.local/lib/python3.12/site-packages (from flufl.lock<8,>=5->dvc) (4.1.0)
+[2024-05-12T15:45:17.140+0000] {subprocess.py:93} INFO - INFO: pip is looking at multiple versions of gto to determine which version is compatible with other requirements. This could take a while.
+[2024-05-12T15:45:17.212+0000] {subprocess.py:93} INFO - Collecting gto<2,>=1.6.0 (from dvc)
+[2024-05-12T15:45:17.584+0000] {subprocess.py:93} INFO -   Downloading gto-1.7.0-py3-none-any.whl.metadata (4.2 kB)
+[2024-05-12T15:45:17.652+0000] {subprocess.py:93} INFO -   Downloading gto-1.6.2-py3-none-any.whl.metadata (4.3 kB)
+[2024-05-12T15:45:17.677+0000] {subprocess.py:93} INFO - Requirement already satisfied: typer>=0.4.1 in /home/***/.local/lib/python3.12/site-packages (from gto<2,>=1.6.0->dvc) (0.12.3)
+[2024-05-12T15:45:17.681+0000] {subprocess.py:93} INFO - Requirement already satisfied: pydantic!=2.0.0,<3,>=1.9.0 in /home/***/.local/lib/python3.12/site-packages (from gto<2,>=1.6.0->dvc) (2.7.1)
+[2024-05-12T15:45:17.683+0000] {subprocess.py:93} INFO - Requirement already satisfied: semver>=3.0.0 in /home/***/.local/lib/python3.12/site-packages (from gto<2,>=1.6.0->dvc) (3.0.2)
+[2024-05-12T15:45:17.684+0000] {subprocess.py:93} INFO - Requirement already satisfied: entrypoints in /home/***/.local/lib/python3.12/site-packages (from gto<2,>=1.6.0->dvc) (0.4)
+[2024-05-12T15:45:17.693+0000] {subprocess.py:93} INFO - Requirement already satisfied: antlr4-python3-runtime==4.9.* in /home/***/.local/lib/python3.12/site-packages (from hydra-core>=1.1->dvc) (4.9.3)
+[2024-05-12T15:45:17.710+0000] {subprocess.py:93} INFO - Requirement already satisfied: appdirs in /home/***/.local/lib/python3.12/site-packages (from iterative-telemetry>=0.0.7->dvc) (1.4.4)
+[2024-05-12T15:45:17.711+0000] {subprocess.py:93} INFO - Requirement already satisfied: filelock in /home/***/.local/lib/python3.12/site-packages (from iterative-telemetry>=0.0.7->dvc) (3.14.0)
+[2024-05-12T15:45:17.777+0000] {subprocess.py:93} INFO - Requirement already satisfied: charset-normalizer<4,>=2 in /home/***/.local/lib/python3.12/site-packages (from requests>=2.22->dvc) (3.3.2)
+[2024-05-12T15:45:17.778+0000] {subprocess.py:93} INFO - Requirement already satisfied: idna<4,>=2.5 in /home/***/.local/lib/python3.12/site-packages (from requests>=2.22->dvc) (3.7)
+[2024-05-12T15:45:17.780+0000] {subprocess.py:93} INFO - Requirement already satisfied: urllib3<3,>=1.21.1 in /home/***/.local/lib/python3.12/site-packages (from requests>=2.22->dvc) (2.2.1)
+[2024-05-12T15:45:17.781+0000] {subprocess.py:93} INFO - Requirement already satisfied: certifi>=2017.4.17 in /home/***/.local/lib/python3.12/site-packages (from requests>=2.22->dvc) (2024.2.2)
+[2024-05-12T15:45:17.788+0000] {subprocess.py:93} INFO - Requirement already satisfied: markdown-it-py>=2.2.0 in /home/***/.local/lib/python3.12/site-packages (from rich>=12->dvc) (3.0.0)
+[2024-05-12T15:45:17.790+0000] {subprocess.py:93} INFO - Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /home/***/.local/lib/python3.12/site-packages (from rich>=12->dvc) (2.17.2)
+[2024-05-12T15:45:17.798+0000] {subprocess.py:93} INFO - Requirement already satisfied: ruamel.yaml.clib>=0.2.7 in /home/***/.local/lib/python3.12/site-packages (from ruamel.yaml>=0.17.11->dvc) (0.2.8)
+[2024-05-12T15:45:17.817+0000] {subprocess.py:93} INFO - Requirement already satisfied: gitpython>3 in /home/***/.local/lib/python3.12/site-packages (from scmrepo<3,>=2.0.2->dvc) (3.1.43)
+[2024-05-12T15:45:17.819+0000] {subprocess.py:93} INFO - Requirement already satisfied: pygit2>=1.14.0 in /home/***/.local/lib/python3.12/site-packages (from scmrepo<3,>=2.0.2->dvc) (1.14.1)
+[2024-05-12T15:45:17.826+0000] {subprocess.py:93} INFO - Requirement already satisfied: asyncssh<3,>=2.13.1 in /home/***/.local/lib/python3.12/site-packages (from scmrepo<3,>=2.0.2->dvc) (2.14.2)
+[2024-05-12T15:45:17.869+0000] {subprocess.py:93} INFO - Requirement already satisfied: setuptools in /home/***/.local/lib/python3.12/site-packages (from zc.lockfile>=1.2.1->dvc) (66.1.1)
+[2024-05-12T15:45:17.875+0000] {subprocess.py:93} INFO - Requirement already satisfied: aiohttp in /home/***/.local/lib/python3.12/site-packages (from aiohttp-retry>=2.5.0->dvc-http>=2.29.0->dvc) (3.9.5)
+[2024-05-12T15:45:17.886+0000] {subprocess.py:93} INFO - Requirement already satisfied: cryptography>=39.0 in /home/***/.local/lib/python3.12/site-packages (from asyncssh<3,>=2.13.1->scmrepo<3,>=2.0.2->dvc) (41.0.7)
+[2024-05-12T15:45:17.887+0000] {subprocess.py:93} INFO - Requirement already satisfied: typing-extensions>=3.6 in /home/***/.local/lib/python3.12/site-packages (from asyncssh<3,>=2.13.1->scmrepo<3,>=2.0.2->dvc) (4.11.0)
+[2024-05-12T15:45:17.953+0000] {subprocess.py:93} INFO - Requirement already satisfied: billiard<5.0,>=4.2.0 in /home/***/.local/lib/python3.12/site-packages (from celery->dvc) (4.2.0)
+[2024-05-12T15:45:17.955+0000] {subprocess.py:93} INFO - Requirement already satisfied: vine<6.0,>=5.1.0 in /home/***/.local/lib/python3.12/site-packages (from celery->dvc) (5.1.0)
+[2024-05-12T15:45:17.956+0000] {subprocess.py:93} INFO - Requirement already satisfied: click<9.0,>=8.1.2 in /home/***/.local/lib/python3.12/site-packages (from celery->dvc) (8.1.7)
+[2024-05-12T15:45:17.957+0000] {subprocess.py:93} INFO - Requirement already satisfied: click-didyoumean>=0.3.0 in /home/***/.local/lib/python3.12/site-packages (from celery->dvc) (0.3.1)
+[2024-05-12T15:45:17.958+0000] {subprocess.py:93} INFO - Requirement already satisfied: click-repl>=0.2.0 in /home/***/.local/lib/python3.12/site-packages (from celery->dvc) (0.3.0)
+[2024-05-12T15:45:17.960+0000] {subprocess.py:93} INFO - Requirement already satisfied: click-plugins>=1.1.1 in /home/***/.local/lib/python3.12/site-packages (from celery->dvc) (1.1.1)
+[2024-05-12T15:45:17.961+0000] {subprocess.py:93} INFO - Requirement already satisfied: tzdata>=2022.7 in /home/***/.local/lib/python3.12/site-packages (from celery->dvc) (2024.1)
+[2024-05-12T15:45:17.962+0000] {subprocess.py:93} INFO - Requirement already satisfied: python-dateutil>=2.8.2 in /home/***/.local/lib/python3.12/site-packages (from celery->dvc) (2.9.0.post0)
+[2024-05-12T15:45:18.083+0000] {subprocess.py:93} INFO - Requirement already satisfied: gitdb<5,>=4.0.1 in /home/***/.local/lib/python3.12/site-packages (from gitpython>3->scmrepo<3,>=2.0.2->dvc) (4.0.11)
+[2024-05-12T15:45:18.113+0000] {subprocess.py:93} INFO - Requirement already satisfied: amqp<6.0.0,>=5.1.1 in /home/***/.local/lib/python3.12/site-packages (from kombu->dvc) (5.2.0)
+[2024-05-12T15:45:18.134+0000] {subprocess.py:93} INFO - Requirement already satisfied: mdurl~=0.1 in /home/***/.local/lib/python3.12/site-packages (from markdown-it-py>=2.2.0->rich>=12->dvc) (0.1.2)
+[2024-05-12T15:45:18.143+0000] {subprocess.py:93} INFO - Requirement already satisfied: PyYAML>=5.1.0 in /home/***/.local/lib/python3.12/site-packages (from omegaconf->dvc) (6.0.1)
+[2024-05-12T15:45:18.153+0000] {subprocess.py:93} INFO - Requirement already satisfied: annotated-types>=0.4.0 in /home/***/.local/lib/python3.12/site-packages (from pydantic!=2.0.0,<3,>=1.9.0->gto<2,>=1.6.0->dvc) (0.6.0)
+[2024-05-12T15:45:18.154+0000] {subprocess.py:93} INFO - Requirement already satisfied: pydantic-core==2.18.2 in /home/***/.local/lib/python3.12/site-packages (from pydantic!=2.0.0,<3,>=1.9.0->gto<2,>=1.6.0->dvc) (2.18.2)
+[2024-05-12T15:45:18.171+0000] {subprocess.py:93} INFO - Requirement already satisfied: cffi>=1.16.0 in /home/***/.local/lib/python3.12/site-packages (from pygit2>=1.14.0->scmrepo<3,>=2.0.2->dvc) (1.16.0)
+[2024-05-12T15:45:18.214+0000] {subprocess.py:93} INFO - Requirement already satisfied: orjson in /home/***/.local/lib/python3.12/site-packages (from sqltrie<1,>=0.11.0->dvc-data<3.10,>=3.9->dvc) (3.10.3)
+[2024-05-12T15:45:18.225+0000] {subprocess.py:93} INFO - Requirement already satisfied: shellingham>=1.3.0 in /home/***/.local/lib/python3.12/site-packages (from typer>=0.4.1->gto<2,>=1.6.0->dvc) (1.5.4)
+[2024-05-12T15:45:18.347+0000] {subprocess.py:93} INFO - Requirement already satisfied: aiosignal>=1.1.2 in /home/***/.local/lib/python3.12/site-packages (from aiohttp->aiohttp-retry>=2.5.0->dvc-http>=2.29.0->dvc) (1.3.1)
+[2024-05-12T15:45:18.349+0000] {subprocess.py:93} INFO - Requirement already satisfied: frozenlist>=1.1.1 in /home/***/.local/lib/python3.12/site-packages (from aiohttp->aiohttp-retry>=2.5.0->dvc-http>=2.29.0->dvc) (1.4.1)
+[2024-05-12T15:45:18.351+0000] {subprocess.py:93} INFO - Requirement already satisfied: multidict<7.0,>=4.5 in /home/***/.local/lib/python3.12/site-packages (from aiohttp->aiohttp-retry>=2.5.0->dvc-http>=2.29.0->dvc) (6.0.5)
+[2024-05-12T15:45:18.353+0000] {subprocess.py:93} INFO - Requirement already satisfied: yarl<2.0,>=1.0 in /home/***/.local/lib/python3.12/site-packages (from aiohttp->aiohttp-retry>=2.5.0->dvc-http>=2.29.0->dvc) (1.9.4)
+[2024-05-12T15:45:18.382+0000] {subprocess.py:93} INFO - Requirement already satisfied: pycparser in /home/***/.local/lib/python3.12/site-packages (from cffi>=1.16.0->pygit2>=1.14.0->scmrepo<3,>=2.0.2->dvc) (2.22)
+[2024-05-12T15:45:18.418+0000] {subprocess.py:93} INFO - Requirement already satisfied: prompt-toolkit>=3.0.36 in /home/***/.local/lib/python3.12/site-packages (from click-repl>=0.2.0->celery->dvc) (3.0.43)
+[2024-05-12T15:45:18.446+0000] {subprocess.py:93} INFO - Requirement already satisfied: smmap<6,>=3.0.1 in /home/***/.local/lib/python3.12/site-packages (from gitdb<5,>=4.0.1->gitpython>3->scmrepo<3,>=2.0.2->dvc) (5.0.1)
+[2024-05-12T15:45:18.544+0000] {subprocess.py:93} INFO - Requirement already satisfied: wcwidth in /home/***/.local/lib/python3.12/site-packages (from prompt-toolkit>=3.0.36->click-repl>=0.2.0->celery->dvc) (0.2.13)
+[2024-05-12T15:45:18.637+0000] {subprocess.py:93} INFO - Downloading fsspec-2023.12.2-py3-none-any.whl (168 kB)
+[2024-05-12T15:45:18.852+0000] {subprocess.py:93} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 169.0/169.0 kB 809.5 kB/s eta 0:00:00
+[2024-05-12T15:45:19.183+0000] {subprocess.py:93} INFO - Downloading dvc-3.43.1-py3-none-any.whl (442 kB)
+[2024-05-12T15:45:20.039+0000] {subprocess.py:93} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 442.4/442.4 kB 513.3 kB/s eta 0:00:00
+[2024-05-12T15:45:20.394+0000] {subprocess.py:93} INFO - Downloading dvc_data-3.9.0-py3-none-any.whl (69 kB)
+[2024-05-12T15:45:20.577+0000] {subprocess.py:93} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 69.3/69.3 kB 414.2 kB/s eta 0:00:00
+[2024-05-12T15:45:20.621+0000] {subprocess.py:93} INFO - Downloading gto-1.6.2-py3-none-any.whl (46 kB)
+[2024-05-12T15:45:20.729+0000] {subprocess.py:93} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 46.6/46.6 kB 542.4 kB/s eta 0:00:00
+[2024-05-12T15:45:21.025+0000] {subprocess.py:93} INFO - Downloading scmrepo-2.1.1-py3-none-any.whl (70 kB)
+[2024-05-12T15:45:21.161+0000] {subprocess.py:93} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 70.3/70.3 kB 526.2 kB/s eta 0:00:00
+[2024-05-12T15:45:21.206+0000] {subprocess.py:93} INFO - Downloading dvc_objects-3.0.6-py3-none-any.whl (36 kB)
+[2024-05-12T15:45:23.826+0000] {subprocess.py:93} INFO - Installing collected packages: fsspec, dvc-objects, dvc-data, scmrepo, gto, dvc
+[2024-05-12T15:45:23.826+0000] {subprocess.py:93} INFO -   Attempting uninstall: fsspec
+[2024-05-12T15:45:23.965+0000] {subprocess.py:93} INFO -     Found existing installation: fsspec 2024.3.1
+[2024-05-12T15:45:23.971+0000] {subprocess.py:93} INFO -     Uninstalling fsspec-2024.3.1:
+[2024-05-12T15:45:23.972+0000] {subprocess.py:93} INFO -       Successfully uninstalled fsspec-2024.3.1
+[2024-05-12T15:45:24.102+0000] {subprocess.py:93} INFO -   Attempting uninstall: dvc-objects
+[2024-05-12T15:45:24.262+0000] {subprocess.py:93} INFO -     Found existing installation: dvc-objects 5.1.0
+[2024-05-12T15:45:24.266+0000] {subprocess.py:93} INFO -     Uninstalling dvc-objects-5.1.0:
+[2024-05-12T15:45:24.267+0000] {subprocess.py:93} INFO -       Successfully uninstalled dvc-objects-5.1.0
+[2024-05-12T15:45:24.308+0000] {subprocess.py:93} INFO -   Attempting uninstall: dvc-data
+[2024-05-12T15:45:24.448+0000] {subprocess.py:93} INFO -     Found existing installation: dvc-data 3.15.1
+[2024-05-12T15:45:24.457+0000] {subprocess.py:93} INFO -     Uninstalling dvc-data-3.15.1:
+[2024-05-12T15:45:24.460+0000] {subprocess.py:93} INFO -       Successfully uninstalled dvc-data-3.15.1
+[2024-05-12T15:45:24.540+0000] {subprocess.py:93} INFO -   Attempting uninstall: scmrepo
+[2024-05-12T15:45:24.694+0000] {subprocess.py:93} INFO -     Found existing installation: scmrepo 3.3.2
+[2024-05-12T15:45:24.700+0000] {subprocess.py:93} INFO -     Uninstalling scmrepo-3.3.2:
+[2024-05-12T15:45:24.701+0000] {subprocess.py:93} INFO -       Successfully uninstalled scmrepo-3.3.2
+[2024-05-12T15:45:24.773+0000] {subprocess.py:93} INFO -   Attempting uninstall: gto
+[2024-05-12T15:45:24.919+0000] {subprocess.py:93} INFO -     Found existing installation: gto 1.7.1
+[2024-05-12T15:45:24.923+0000] {subprocess.py:93} INFO -     Uninstalling gto-1.7.1:
+[2024-05-12T15:45:24.924+0000] {subprocess.py:93} INFO -       Successfully uninstalled gto-1.7.1
+[2024-05-12T15:45:24.971+0000] {subprocess.py:93} INFO -   Attempting uninstall: dvc
+[2024-05-12T15:45:25.126+0000] {subprocess.py:93} INFO -     Found existing installation: dvc 3.50.1
+[2024-05-12T15:45:25.181+0000] {subprocess.py:93} INFO -     Uninstalling dvc-3.50.1:
+[2024-05-12T15:45:25.185+0000] {subprocess.py:93} INFO -       Successfully uninstalled dvc-3.50.1
+[2024-05-12T15:45:26.644+0000] {subprocess.py:93} INFO - Successfully installed dvc-3.43.1 dvc-data-3.9.0 dvc-objects-3.0.6 fsspec-2023.12.2 gto-1.6.2 scmrepo-2.1.1
+[2024-05-12T15:45:26.977+0000] {subprocess.py:93} INFO - Reading package lists...
+[2024-05-12T15:45:26.979+0000] {subprocess.py:93} INFO - E: List directory /var/lib/apt/lists/partial is missing. - Acquire (13: Permission denied)
+[2024-05-12T15:45:26.980+0000] {subprocess.py:97} INFO - Command exited with return code 100
+[2024-05-12T15:45:26.981+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-12T15:45:26.990+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 100.
+[2024-05-12T15:45:26.994+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=web_article_scraping, task_id=dvc_add_and_push, run_id=manual__2024-05-12T15:44:49.123982+00:00, execution_date=20240512T154449, start_date=20240512T154505, end_date=20240512T154526
+[2024-05-12T15:45:27.009+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 97 for task dvc_add_and_push (Bash command failed. The command returned a non-zero exit code 100.; 4633)
+[2024-05-12T15:45:27.061+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-05-12T15:45:27.075+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-05-12T15:45:27.077+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

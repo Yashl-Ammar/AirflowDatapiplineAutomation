@@ -1,0 +1,41 @@
+[2024-05-12T15:04:46.396+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-12T15:04:46.413+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: web_article_scraping.dvc_add_and_push manual__2024-05-12T15:04:31.723483+00:00 [queued]>
+[2024-05-12T15:04:46.421+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: web_article_scraping.dvc_add_and_push manual__2024-05-12T15:04:31.723483+00:00 [queued]>
+[2024-05-12T15:04:46.421+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-05-12T15:04:46.432+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): dvc_add_and_push> on 2024-05-12 15:04:31.723483+00:00
+[2024-05-12T15:04:46.438+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=3877) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-05-12T15:04:46.439+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'web_article_scraping', 'dvc_add_and_push', 'manual__2024-05-12T15:04:31.723483+00:00', '--job-id', '60', '--raw', '--subdir', 'DAGS_FOLDER/mlops_dag.py', '--cfg-path', '/tmp/tmp_8ip_ikf']
+[2024-05-12T15:04:46.439+0000] {standard_task_runner.py:63} INFO - Started process 3879 to run task
+[2024-05-12T15:04:46.440+0000] {standard_task_runner.py:91} INFO - Job 60: Subtask dvc_add_and_push
+[2024-05-12T15:04:46.475+0000] {task_command.py:426} INFO - Running <TaskInstance: web_article_scraping.dvc_add_and_push manual__2024-05-12T15:04:31.723483+00:00 [running]> on host 8b349270b58a
+[2024-05-12T15:04:46.530+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='web_article_scraping' AIRFLOW_CTX_TASK_ID='dvc_add_and_push' AIRFLOW_CTX_EXECUTION_DATE='2024-05-12T15:04:31.723483+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-12T15:04:31.723483+00:00'
+[2024-05-12T15:04:46.531+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-12T15:04:46.531+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-05-12T15:04:46.532+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', "\ncd /opt/***/dags && python3 -m dvc remote add -d mygoogleDrive gdrive://1akLltC_11ZTBzZF-D4cZt_sZIf-jheJE && \\ # Add Google Drive remote\npython3 -m dvc add extracted_data.csv && git add . && git commit -m 'committed via ***' && python3 -m dvc push -r mygoogleDrive && \\  # Push to Google Drive\ngit push"]
+[2024-05-12T15:04:46.540+0000] {subprocess.py:86} INFO - Output:
+[2024-05-12T15:04:46.591+0000] {subprocess.py:93} INFO - /home/***/.local/bin/python3: No module named dvc
+[2024-05-12T15:04:46.642+0000] {subprocess.py:93} INFO - /home/***/.local/bin/python3: No module named dvc
+[2024-05-12T15:04:46.646+0000] {subprocess.py:93} INFO - /usr/bin/bash: line 4: git: command not found
+[2024-05-12T15:04:46.647+0000] {subprocess.py:97} INFO - Command exited with return code 127
+[2024-05-12T15:04:46.647+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-12T15:04:46.654+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 127.
+[2024-05-12T15:04:46.657+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=web_article_scraping, task_id=dvc_add_and_push, run_id=manual__2024-05-12T15:04:31.723483+00:00, execution_date=20240512T150431, start_date=20240512T150446, end_date=20240512T150446
+[2024-05-12T15:04:46.668+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 60 for task dvc_add_and_push (Bash command failed. The command returned a non-zero exit code 127.; 3879)
+[2024-05-12T15:04:46.693+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-05-12T15:04:46.706+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-05-12T15:04:46.708+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
